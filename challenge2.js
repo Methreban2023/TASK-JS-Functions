@@ -6,9 +6,13 @@
  * e.g.
  * greet("Hamza") logs "Hello Hamza"
  */
+let name = "Hamza";
+
 function greet(name) {
-  // Your code here
+  console.log(`Hello ${name}`);
 }
+
+greet("Dalia");
 
 /**
  * isOdd(n):
@@ -20,8 +24,12 @@ function greet(name) {
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  // Your code here
+  //let result = n % 2;
+  if (n % 2) {
+    return console.log(`true`);
+  } else return console.log(`false`);
 }
+isOdd(10);
 
 /**
  * oddsSmallerThan(n):
@@ -33,8 +41,15 @@ function isOdd(n) {
  * oddsSmallerThan(15) -> 7
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  let result = 0;
+  for (let i = 1; i < n; i++) {
+    if (i % 2) {
+      result++;
+    }
+  } //for
+  return console.log(`there are ${result} odd numbers in ${n}`);
 }
+//oddsSmallerThan(7);
 
 /**
  * squareOrDouble(n):
@@ -47,5 +62,13 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  // Your code here
-}
+  let result = 0;
+  if (isOdd(n)) {
+    result = Math.pow(n, 2);
+  } else {
+    result = n * n;
+  }
+  return console.log(result);
+} // squareOrDouble
+
+squareOrDouble(9);
