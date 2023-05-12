@@ -32,15 +32,13 @@ printAge(1977);
  * -- tr: it should print `Merhaba NAME`
  */
 function printHello(name, language) {
-  if (language == "en") {
-    return console.log(`Hello ${name}`);
-  } else if (language == "es") {
-    return console.log(`Hola ${name}`);
-  } else if (language == "fr") {
-    return console.log(`Bonjour ${name}`);
-  } else if (language == "tr") {
-    return console.log(`Merhaba ${name}`);
-  } else console.log(`Dont know the language!`);
+  let greet;
+  if (language == "en") greet = "Hello";
+  else if (language == "es") greet = "Hola";
+  else if (language == "fr") greet = "Bonjour";
+  else if (language == "tr") greet = "Marhaba";
+  else greet = "unknown language!";
+  console.log(`${greet} ${name}`);
 }
 
 printHello("Dalia", "fr");
@@ -50,12 +48,19 @@ printHello("Dalia", "fr");
  * - that takes 2 parameters as numbers
  * - should print out the bigger number
  */
+
+//
 function printMax(no1, no2) {
-  if (no1 > no2) {
-    console.log(`${no1}`);
-  } else if (no2 > no1) {
-    console.log(`${no2}`);
-  } else console.log(`they are equal!`);
+  if (no1 > no2) return no1;
+  else if (no2 > no1) return no2;
+  else return `they are equal!`;
 }
 
-printMax(10, 10);
+//another solution for returning Max number :
+function printMax2(n1, n2) {
+  if (n1 !== n2) return Math.max(n1, n2);
+  else return `they are equal!`;
+}
+
+console.log(printMax(1, 10));
+console.log(printMax2(2, 10));

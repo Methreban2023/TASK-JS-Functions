@@ -26,10 +26,10 @@ greet("Dalia");
 function isOdd(n) {
   //let result = n % 2;
   if (n % 2) {
-    return console.log(`true`);
-  } else return console.log(`false`);
+    return true;
+  } else return false;
 }
-isOdd(10);
+console.log(isOdd(10));
 
 /**
  * oddsSmallerThan(n):
@@ -47,9 +47,10 @@ function oddsSmallerThan(n) {
       result++;
     }
   } //for
-  return console.log(`there are ${result} odd numbers in ${n}`);
+  return result;
+  //console.log(`there are ${result} odd numbers in ${n}`);
 }
-//oddsSmallerThan(7);
+console.log(`this is oddsSmallerThan ${oddsSmallerThan(15)}`);
 
 /**
  * squareOrDouble(n):
@@ -66,9 +67,9 @@ function squareOrDouble(n) {
   if (isOdd(n)) {
     result = Math.pow(n, 2);
   } else {
-    result = n * n;
+    result = n * 2;
   }
-  return console.log(result);
+  return result;
 } // squareOrDouble
 
-squareOrDouble(9);
+console.log(squareOrDouble(16));
