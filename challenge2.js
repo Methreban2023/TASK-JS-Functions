@@ -25,11 +25,10 @@ greet("Dalia");
  */
 function isOdd(n) {
   //let result = n % 2;
-  if (n % 2) {
-    return true;
-  } else return false;
+  let result = n % 2;
+  return Boolean(result);
 }
-console.log(isOdd(10));
+console.log(isOdd(9));
 
 /**
  * oddsSmallerThan(n):
@@ -64,12 +63,8 @@ console.log(`this is oddsSmallerThan ${oddsSmallerThan(15)}`);
  */
 function squareOrDouble(n) {
   let result = 0;
-  if (isOdd(n)) {
-    result = Math.pow(n, 2);
-  } else {
-    result = n * 2;
-  }
-  return result;
+  if (isOdd(n)) return Math.pow(n, 2);
+  else return n * 2;
 } // squareOrDouble
 
-console.log(squareOrDouble(16));
+console.log(squareOrDouble(9));
